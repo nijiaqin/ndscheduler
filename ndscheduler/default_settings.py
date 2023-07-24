@@ -60,10 +60,10 @@ DATABASE_TABLENAMES = {
 
 # SQLite
 #
-DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.sqlite.DatastoreSqlite'
-DATABASE_CONFIG_DICT = {
-    'file_path': 'datastore.db'
-}
+# DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.sqlite.DatastoreSqlite'
+#DATABASE_CONFIG_DICT = {
+#    'file_path': 'datastore.db'
+# }
 
 # Postgres
 #
@@ -79,6 +79,14 @@ DATABASE_CONFIG_DICT = {
 
 # MySQL
 #
+DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.mysql.DatastoreMySQL'
+DATABASE_CONFIG_DICT = {
+     'user': 'dmuser',
+     'password': 'dm_zxPwsOjPH10Ujg',
+     'hostname': 'tidbdw.main.payby.com',
+     'port': 4000,
+     'database': 'scheduler'
+}
 # DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.mysql.DatastoreMySQL'
 # DATABASE_CONFIG_DICT = {
 #     'user': 'username',

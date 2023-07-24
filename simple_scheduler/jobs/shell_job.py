@@ -21,10 +21,16 @@ class ShellJob(job.JobBase):
         }
 
     def run(self, *args, **kwargs):
-        return {'returncode': call(args)}
+        test = ""
+        if(len(args)>0):
+            test = args[0]
+        else:
+            test ="None Args"
+        return {'returncode': test}
 
 
 if __name__ == "__main__":
     # You can easily test this job here
     job = ShellJob.create_test_instance()
-    job.run('ls', '-l')
+    result = job.run('ls', '-l')
+    print(result)
